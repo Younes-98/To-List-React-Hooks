@@ -65,6 +65,8 @@ export default function AddList({showAlert, setShowAlert}) {
                     </div>  
                 </div>))}
         </div>
+
+        {listOffeild.length > 1 && <button class="btn btn-outline btn-error mt-5 place-self-end">Clear All</button>} 
     </div>
   )
 }
