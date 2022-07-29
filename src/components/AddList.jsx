@@ -38,7 +38,10 @@ export default function AddList({showAlert, setShowAlert}) {
          : setListOffeild(listOffeild.map(item => item.id === id ? {id: id, feild: feild, edit: !edit} : item))
     }
 
-    console.log(listOffeild)
+    const clearAll = () => {
+        setListOffeild([])
+    }
+
   return (
     <div className="flex flex-col">
         <div className="flex text-center justify-center">
@@ -66,7 +69,7 @@ export default function AddList({showAlert, setShowAlert}) {
                 </div>))}
         </div>
 
-        {listOffeild.length > 1 && <button class="btn btn-outline btn-error mt-5 place-self-end">Clear All</button>} 
+        {listOffeild.length > 1 && <button className="btn btn-outline btn-error mt-5 place-self-end" onClick={() => clearAll()}>Clear All</button>} 
     </div>
   )
 }
