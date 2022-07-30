@@ -14,7 +14,7 @@ export default function AddList({showAlert, setShowAlert}) {
     // For edite
     const [newfeild, setNewfeild] = useState('')
 
-    console.log(newfeild)
+    // console.log(newfeild)
 
     const [listOffeild, setListOffeild] = useState([])
 
