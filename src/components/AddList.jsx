@@ -1,3 +1,5 @@
+// Created by Younes EL MOUATASIM // @Copyright@
+
 import React from 'react';
 import { useState } from 'react';
 
@@ -15,10 +17,9 @@ export default function AddList({showAlert, setShowAlert}) {
 
     const [listOffeild, setListOffeild] = useState([])
 
-    const [forEdit, setForEdit] = useState(false)
     const Add = () => {
         if(feild !== ''){
-            setListOffeild([...listOffeild, {id: id, feild: feild, edit: forEdit}])
+            setListOffeild([...listOffeild, {id: id, feild: feild, edit: false}])
             setFeild('')
         } else {
             setShowAlert(true)
@@ -33,7 +34,7 @@ export default function AddList({showAlert, setShowAlert}) {
 
     const Edit = (id, feild, edit) => {
         setNewfeild(feild);
-
+        // Created by Younes EL MOUATASIM @Copyright@
         (edit) ? setListOffeild(listOffeild.map(item => item.id === id ? {id: id, feild: newfeild, edit: !edit} : item))
          : setListOffeild(listOffeild.map(item => item.id === id ? {id: id, feild: feild, edit: !edit} : item))
     }
